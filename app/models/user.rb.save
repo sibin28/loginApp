@@ -1,0 +1,5 @@
+attr_accessible :username, :password, :email, :password_confirmationclass User < ActiveRecord::Base
+   attr_accessible :username, :password, :email, :password_confirmation
+   validates :username, :presence => true, length: { minimum: 2 }
+   validates :password, :presence => true
+end
